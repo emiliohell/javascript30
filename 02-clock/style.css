@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: url(./images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-face {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  height: 380px;
+  width: 380px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  border: 25px solid white;
+  -webkit-box-shadow: 0px 0px 2px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.clock-face-inner {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  height: 330px;
+  width: 330px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: inset 0px 0px 2px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#time {
+  color: black;
+  font-size: 40px;
+}
+
+.clock-arms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arm {
+  position: absolute;
+  width: 6px;
+  height: 300px;
+}
+
+.arm2 {
+  background-color: black;
+  width: 6px;
+  height: 152px;
+  border-radius: 25px;
+}
+
+.arm3 {
+  background-color: black;
+  width: 6px;
+  height: 152px;
+  border-radius: 25px;
+}
