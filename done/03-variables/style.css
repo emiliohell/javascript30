@@ -1,0 +1,64 @@
+:root {
+  --main-color: #ffc600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #193549;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: "helvetica neue", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  text-align: center;
+  color: white;
+  font-family: "helvetica neue", sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+.main {
+  display: flexbox;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.image {
+  margin-top: 40px;
+  filter: blur(var(--blur-filter));
+  -webkit-filter: blur(var(--blur-filter, 10px));
+  border: var(--border-size, 10px) solid var(--main-color, #ffc600);
+}
+
+.settings {
+  display: flexbox;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.main-color {
+  color: var(--main-color);
+}

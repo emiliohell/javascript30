@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Document</title>
+    <title>Scoped CSS Variables and JS</title>
     <!-- Write over the style.css -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -12,20 +12,19 @@
         <ul>
           <li>
             Spacing:
-            <input type="range" min="1" max="100" value="50" id="myRange" />
+            <input type="range" min="0" max="200" value="10" id="borderVar" />
           </li>
           <li>
             Blur:
-            <input type="range" min="1" max="100" value="50" />
+            <input type="range" min="0" max="20" value="10" id="blurVar" />
           </li>
           <li>
             Base Color
             <input type="color" id="favcolor" name="favcolor" value="#ffc600" />
           </li>
         </ul>
-        <p>Value:<span id="demo"></span></p>
       </div>
-      <img class="image" src="/images/image.jpg" id="image" />
+      <img class="image" src="./images/image.jpg" id="image" />
     </div>
     <!-- Wtire over the script.js -->
     <script src="script.js"></script>
