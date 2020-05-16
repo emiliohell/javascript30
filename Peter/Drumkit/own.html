@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="own.css">
+</head>
+<body>
+
+        <div class="title">
+            <h1>CHALLENGE 1</h1>
+        </div>  
+
+        <div class="keys">
+            <div data-key="65" class="key"><kbd>A<br></kbd><span class="sound">CLAP</span></div>
+            <div data-key="83" class="key"><kbd>S<br></kbd><span class="sound">HIHAT</span></div>
+            <div data-key="68" class="key"><kbd>D<br></kbd><span class="sound">KICK</span></div>
+            <div data-key="70" class="key"><kbd>F<br></kbd><span class="sound">OPENHAT</span></div>
+            <div data-key="71" class="key"><kbd>G<br></kbd><span class="sound">BOOM</span></div>
+            <div data-key="72" class="key"><kbd>H<br></kbd><span class="sound">RIDE</span></div>
+            <div data-key="74" class="key"><kbd>J<br></kbd><span class="sound">SNARE</span></div>
+            <div data-key="75" class="key"><kbd>K<br></kbd><span class="sound">TOM</span></div>
+            <div data-key="76" class="key"><kbd>L<br></kbd><span class="sound">TINK</span></div>
+        </div>
+
+
+            <audio src="sounds/clap.wav"></audio>
+            <audio src="sounds/boom.wav"></audio>
+            <audio src="sounds/kick.wav"></audio>
+            <audio src="sounds/openhat.wav"></audio>
+            <audio src="sounds/ride.wav"></audio>
+            <audio src="sounds/snare.wav"></audio>
+            <audio src="sounds/tink.wav"></audio>
+            <audio src="sounds/tom.wav"></audio>
+            <audio src="sounds/hihat.wav"></audio>
+
+
+    
+
+
+        <script>
+           const down = document.querySelectorAll('.key');
+           document.addEventListener('keydown', doSomething);
+
+           const up = document.querySelectorAll('.key');
+           document.addEventListener('keyup', stopSomething);
+           
+           const audio = document.querySelectorAll('audio');
+           console.log(audio);
+       
+
+        function doSomething(ev) {
+            for (i = 0; i < down.length; i++)  {
+              const current = down[i];
+            if (ev.keyCode === parseInt(current.dataset.key)) {
+                    current.classList.add("pressed");
+                    audio[i].currentTime = 0;
+                    audio[i].play();
+                   
+               }
+              }
+             }
+           
+           
+           function stopSomething (ev) { 
+               for (i = 0; i < up.length; i++) {
+                if (ev.keyCode === parseInt(up[i].dataset.key)) {
+                     up[i].classList.remove("pressed");
+                     
+              }
+             } 
+            }
+
+
+
+
+        </script>
+</body> 
+</html>
+
+
+
+
+
