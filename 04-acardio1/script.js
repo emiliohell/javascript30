@@ -49,10 +49,15 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 // 4. How many years did all the inventors live all together?
 
 // prettier-ignore
-let collectiveYears = inventors.reduce((total, amount) => total + amount.passed - amount.year, []);
-console.log(collectiveYears);
+// let collectiveYears = inventors.reduce((total, amount) => total + amount.passed - amount.year, []);
+// console.log(collectiveYears);
 
 // 5. Sort the inventors by years lived
+
+// prettier-ignore
+
+// let yearsLived = inventors.sort((a, b) => (a.passed - a.year) - (b.passed - b.year))
+// console.log(yearsLived);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
