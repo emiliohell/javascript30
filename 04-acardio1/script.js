@@ -23,9 +23,18 @@ const people = ['Beethoven, Ludwig', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
 
-// let bornDate = inventors.filter((x) => x.year > 1499);
+let bornDate = inventors.filter((x) => x.year > 1499 && x.year < 1600);
 
-// console.log(bornDate);
+console.table(bornDate);
+
+const fifteen = inventors.filter(function (inventor) {
+  if (inventor.year >= 1500 && inventor.year < 1600) {
+    return true;
+    {
+    }
+  }
+});
+console.table(fifteen)
 
 //The filter function - does what it says on the tin - it filters out the objects in the array that does not match our conditions.
 
@@ -80,15 +89,15 @@ const people = ['Beethoven, Ludwig', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 // prettier-ignore
-const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+// const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-const data2 = data.reduce(function (allNames, name) {
-  if (name in allNames) {
-    allNames[name]++;
-  } else {
-    allNames[name] = 1;
-  }
-  return allNames;
-}, {});
+// const data2 = data.reduce(function (allNames, name) {
+//   if (name in allNames) {
+//     allNames[name]++;
+//   } else {
+//     allNames[name] = 1;
+//   }
+//   return allNames;
+// }, {});
 
-console.log(data2);
+// console.log(data2);
