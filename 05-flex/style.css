@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-size: 35px;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -37,12 +41,12 @@ body {
   width: 20%;
   border: 0.3rem solid rgba(255, 255, 255, 0.1);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-size: cover;
+  background-size: 100vh;
   background-repeat: no-repeat;
-  animation-name: example2;
+  animation-name: outAnimation;
   animation-duration: 1s;
   flex-grow: 4;
 }
@@ -51,16 +55,32 @@ body {
   color: white;
   text-shadow: 1px 2px 4px #000000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 4vw;
+}
+
+.panels > h2 {
+  color: white;
+  text-shadow: 1px 2px 4px #000000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.textAnimation {
+  animation-name: outAnimationText;
+  animation-duration: 1s;
 }
 
 .click {
   width: 100%;
-  animation-name: example;
+  animation-name: inAnimation;
   animation-duration: 1s;
 }
 
-@keyframes example {
+.clickText {
+  animation-name: inAnimationText;
+  animation-duration: 1s;
+  font-size: 8vw;
+}
+
+@keyframes inAnimation {
   0% {
     width: 20%;
   }
@@ -72,7 +92,21 @@ body {
   }
 }
 
-@keyframes example2 {
+@keyframes inAnimationText {
+  0% {
+    font-size: 5vw;
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+  }
+  20% {
+    font-size: 4vw;
+  }
+  100% {
+    font-size: 8vw;
+  }
+}
+
+@keyframes outAnimation {
   0% {
     width: 100%;
   }
@@ -82,4 +116,28 @@ body {
   100% {
     width: 20%;
   }
+}
+
+@keyframes outAnimationText {
+  0% {
+    font-size: 8vw;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  35% {
+    font-size: 9vw;
+  }
+
+  100% {
+    font-size: 35px;
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+  }
+}
+
+.marginText {
+  animation-name: outAnimationText;
+  animation-duration: 1s;
+  margin-top: 50vh;
+  margin-bottom: 50vh;
 }
