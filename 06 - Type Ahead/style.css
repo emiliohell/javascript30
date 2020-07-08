@@ -4,4 +4,28 @@
 
 body {
   margin: 0;
+  background-color: #ffc600;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+form {
+  margin-top: 70px;
+}
+
+input {
+  border: 10px solid #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+}
+
+input[type="text"] {
+  width: 450px;
+  padding: 24px 20px;
+  font-size: 40px;
+  text-align: center;
 }
